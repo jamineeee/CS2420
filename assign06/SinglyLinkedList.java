@@ -42,7 +42,7 @@ public class SinglyLinkedList<T> implements List<T>, Iterable<T> {
 
     public T delete(T element) {
         if (head == null) {
-            return null;
+            throw new NoSuchElementException();
         }
         if (head.data.equals(element)) {
             T save = head.data;
@@ -154,14 +154,14 @@ public class SinglyLinkedList<T> implements List<T>, Iterable<T> {
 
     public T getFirst() {
         if (head == null) {
-            return null;
+            throw new NoSuchElementException();
         }
         return head.data;
     }
 
     public T deleteFirst() {
         if (head == null) {
-            return null;
+            throw new NoSuchElementException();
         }
         T data = head.data;
         head = head.next;
